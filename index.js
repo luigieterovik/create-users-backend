@@ -1,10 +1,12 @@
-const express = require ("express")
+const express = require("express")
 const uuid = require("uuid")
 const bodyParser = require("body-parser")
+const cors = require("cors")
 
 const port = 3001
 const app = express()
 app.use(bodyParser.json())
+app.use(cors())
 
 
 const users = []
