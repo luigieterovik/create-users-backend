@@ -3,7 +3,7 @@ const uuid = require("uuid")
 const bodyParser = require("body-parser")
 const cors = require("cors")
 
-const port = 3001
+const port = process.env.PORT || 3001
 const app = express()
 app.use(bodyParser.json())
 app.use(cors())
@@ -60,6 +60,4 @@ app.delete('/users/:id', checkUserId, (request, response) => {
 })
 
 
-app.listen(port, () => {
-    console.log(`😎 Server started on port ${port}`)
-})
+app.listen(port, '0.0.0.0')
