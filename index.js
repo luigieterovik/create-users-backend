@@ -3,7 +3,7 @@ const uuid = require("uuid")
 const bodyParser = require("body-parser")
 const cors = require("cors")
 const corsOption = {
-    origin: 'https://create-users-backend-production.up.railway.app/users',
+    origin: 'https://create-users-bxuysshur-luigiolivi.vercel.app/',
     credentials: true,
 }
 
