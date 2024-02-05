@@ -2,11 +2,15 @@ const express = require("express")
 const uuid = require("uuid")
 const bodyParser = require("body-parser")
 const cors = require("cors")
+const corsOption = {
+    origin: 'https://create-users-backend-production.up.railway.app/users',
+    credentials: true,
+}
 
 const port = process.env.PORT || 3001
 const app = express()
 app.use(bodyParser.json())
-app.use(cors())
+app.use(cors(corsOption))
 
 
 const users = []
